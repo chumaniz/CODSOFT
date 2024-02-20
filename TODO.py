@@ -43,11 +43,6 @@ def entertask():
     buttonTemp.pack()
     root1.mainloop()
 
-
-
-
-
-
 # Making a Button widget
 enterButton = tk.Button(window, text="Add Task", width=65, command=entertask)
 enterButton.pack(pady=4)
