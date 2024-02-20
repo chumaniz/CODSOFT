@@ -14,13 +14,15 @@ frameTask = Frame(window)
 frameTask.pack()
 
 # Holding items in a list box
-listboxTask=Listbox(frameTask, bg="green", fg="red", height=20, width=60, font="Modern")
-listboxTask.pack(side=tk.RIGHT)
+listboxTask=Listbox(frameTask, bg="grey", fg="white", height=20, width=60, font="Modern")
+listboxTask.pack(side=tk.LEFT)
 
-
-
-
-
+# Scrolldown incase the list is too long for the window
+# Using side to position the bar with its direction and side
+scrollBar = Scrollbar(frameTask)
+scrollBar.pack(side=tk.RIGHT, fill=tk.Y)
+listboxTask.config(yscrollcommand=scrollBar.set)
+scrollBar.config(command=listboxTask.yview)
 
 
 window.mainloop()
