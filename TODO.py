@@ -47,6 +47,14 @@ def entertask():
 enterButton = tk.Button(window, text="Add Task", width=65, command=entertask)
 enterButton.pack(pady=4)
 
+# This function enables deletion of tasks
+def delTask():
+    # Using a selector system to delete tasks...like Gmail
+    selected=listboxTask.curselection()
+    listboxTask.delete(selected[0])
+
+
+
 
 
 window.mainloop()
