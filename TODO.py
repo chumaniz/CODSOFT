@@ -10,19 +10,48 @@ window = Tk()
 window.title("Amahle's Todolist APP")
 
 # Creating Frame widget to hold the listbox and scrollbar 
-frameTask = Frame(window)
+frameTask = tk.Frame(window)
 frameTask.pack()
 
 # Holding items in a list box
-listboxTask=Listbox(frameTask, bg="grey", fg="white", height=20, width=60, font="Modern")
+listboxTask=Listbox(frameTask, bg="green", fg="white", height=20, width=60, font="Modern")
 listboxTask.pack(side=tk.LEFT)
 
 # Scrolldown incase the list is too long for the window
 # Using side to position the bar with its direction and side
-scrollBar = Scrollbar(frameTask)
+scrollBar = tk.Scrollbar(frameTask)
 scrollBar.pack(side=tk.RIGHT, fill=tk.Y)
 listboxTask.config(yscrollcommand=scrollBar.set)
 scrollBar.config(command=listboxTask.yview)
+
+
+def entertask():
+    # A new window will pop up to accept input
+    inputText = ""
+    def add():
+        inputText=entryTask.get(1.0, "end-1c")
+        if inputText =="":
+            tkinter.messagebox.showwarning(title="Warning!",message="Please Enter Your Task.")
+        else:
+            listboxTask.insert(END, inputText)
+            #closing root1 window
+            root1.destroy 
+    root1=Tk()
+    entryTask=Text(root1,width=50,height=6)
+    entryTask.pack()
+    buttonTemp=tk.Button(root1, text="Add task", command=add)
+    buttonTemp.pack()
+    root1.mainloop()
+
+
+
+
+
+
+# Making a Button widget
+enterButton = tk.Button(window, text="Add Task", width=65, command=entertask)
+enterButton.pack(pady=4)
+
 
 
 window.mainloop()
