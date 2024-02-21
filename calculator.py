@@ -10,13 +10,26 @@ window.title("Calculator")
 def button_click(item):
     global expression
     expression = expression + str(item)
-    inputText.set(expression)
+    typedText.set(expression)
 
 # This function enables the clearing of the screen
 def button_clear():
     global expression
     expression = ""
-    inputText.set("")
+    typedText.set("")
+
+# Function for the equal button
+    
+def equals_sign():
+    global expression
+    answer = str(eval(expression))
+    # 'eval' shows the string expression directly and returns the value as an integer
+    typedText.set(answer)
+    expression=""
+
+expression = ""
+typedText = StringVar()
+
 
 
 
