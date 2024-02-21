@@ -53,6 +53,29 @@ def delTask():
     selected=listboxTask.curselection()
     listboxTask.delete(selected[0])
 
+deleteButton = tk.Button(window, text="Delete Selected Task", width=65, command=delTask)
+deleteButton.pack(pady=4)
+
+
+# This function enables the app to mark the task as complete
+
+def markcompleted():
+    completed = listboxTask.curselection()
+    if completed: # Check If item selected
+        index = completed[0]
+        item = listboxTask.get(index)
+
+        item += " ✔"
+
+        # Updating items in the listbox
+
+        listboxTask.delete(index)
+        listboxTask.insert(index, item)
+    else:
+        tkinter.messagebox.showwarning(title="Warning!", message="Please select a task to mark as completed.")
+
+mark_button = tk.Button(window, text="Mark Task As Completed", width=65, command = markcompleted)
+mark_button.pack(pady=4)
 
 
 
