@@ -78,8 +78,6 @@ mark_button = tk.Button(window, text="Mark Task As Completed", width=65, command
 mark_button.pack(pady=4)
 
 
-
-
 window.mainloop()
 # mainloop() runs Tkinter event loop and displays everything
 
