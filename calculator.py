@@ -2,7 +2,7 @@ from tkinter import *
 import tkinter as tk
 
 window = tk.Tk()
-window.geometry('300x250')
+window.geometry('312x324')
 window.resizable(0,0)
 window.title("Calculator")
 
@@ -30,24 +30,29 @@ def equals_sign():
 expression = ""
 typedText = StringVar()
 
-screen_frame = Frame(window, width=320, height=40, bd=0, highlightbackground="cyan", highlightcolor="cyan", highlightthickness=2)
+screen_frame = Frame(window, width=312, height=50, bd=0, highlightbackground="cyan", highlightcolor="cyan", highlightthickness=2)
 screen_frame.pack(side=TOP)
 
-screen_fill = Entry(screen_frame, font=('Impact', 20, 'bold'),
-textvariable=typedText, width=60, bg="#cec7ff", bd=0, justify=RIGHT)
+screen_fill = Entry(screen_frame, font=('Impact', 18, 'bold'),
+textvariable=typedText, width=50, bg="#cec7ff", bd=0, justify=RIGHT)
 
 screen_fill.grid(row=0, column=0)
 
 screen_fill.pack(ipady=10)
 
 
-buttonPad = Frame(window, width=400, height=300, bg="grey")
+buttonPad = Frame(window, width=312, height=272.5, bg="grey")
 
 buttonPad.pack()
 
-clear = Button(buttonPad, text = "Clr", fg="grey", width=40, height=4, bd=0, bg="#e60b0b", cursor="hand2", command=lambda: button_clear()).grid(row=0, column=1, columnspan=3, padx=1, pady=1)
+# row1
+clear = Button(buttonPad, text = "Clr", fg="red", width=32, height=3, bd=0, bg="#c9c7c7", cursor="hand2", command=lambda: button_clear()).grid(row=0, column=1, columnspan=3, padx=1, pady=1)
 
+divide = Button(buttonPad, text="÷", fg="blue", width=10, height=3, bd=0, bg="#c9c7c7", cursor="hand2", command=lambda: button_click("÷")).grid(row=0, column=5, padx=1, pady=1)
 
+# row2
+seven = Button(buttonPad, text = "7", fg="black", width=10, height=3, bd=0, bg="#d1d1d1", cursor="hand2", command=lambda: button_click(7)).grid(row=1, column=0, padx=1, pady=1)
 
+eight = Button(buttonPad, text="8", fg="black", width=10, height=3, bd=0, bg="#d1d1d1", cursor="hand2", command=lambda: button_click(8)).grid(row=1, column=1, padx=1, pady=1) 
 
 window.mainloop()
