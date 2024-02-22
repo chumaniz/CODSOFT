@@ -33,6 +33,9 @@ typedText = StringVar()
 screen_frame = Frame(window, width=320, height=40, bd=0, highlightbackground="cyan", highlightcolor="cyan", highlightthickness=2)
 screen_frame.pack(side=TOP)
 
+screen_fill = Entry(screen_frame, font=('Impact', 20, 'bold'),
+numberVariable=typedText, width=60, bg="#cec7ff", bd=0, justify=RIGHT)
+
 
 
 
