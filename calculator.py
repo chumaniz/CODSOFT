@@ -43,10 +43,9 @@ screen_fill.pack(ipady=10)
 
 buttonPad = Frame(window, width=400, height=300, bg="grey")
 
-
-
 buttonPad.pack()
 
+clear = Button(buttonPad, text = "Clr", fg="grey", width=40, height=4, bd=0, bg="#e60b0b", cursor="hand2", command=lambda: button_clear()).grid(row=0, column=1, columnspan=3, padx=1, pady=1)
 
 
 
