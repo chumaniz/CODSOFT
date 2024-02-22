@@ -48,11 +48,14 @@ buttonPad.pack()
 # row1
 clear = Button(buttonPad, text = "Clr", fg="red", width=32, height=3, bd=0, bg="#c9c7c7", cursor="hand2", command=lambda: button_clear()).grid(row=0, column=1, columnspan=3, padx=1, pady=1)
 
-divide = Button(buttonPad, text="÷", fg="blue", width=10, height=3, bd=0, bg="#c9c7c7", cursor="hand2", command=lambda: button_click("÷")).grid(row=0, column=5, padx=1, pady=1)
+divide = Button(buttonPad, text="÷", fg="blue", width=10, height=3, bd=0, bg="#c9c7c7", cursor="hand2", command=lambda: button_click("÷")).grid(row=0, column=3, padx=1, pady=1)
 
 # row2
 seven = Button(buttonPad, text = "7", fg="black", width=10, height=3, bd=0, bg="#d1d1d1", cursor="hand2", command=lambda: button_click(7)).grid(row=1, column=0, padx=1, pady=1)
 
 eight = Button(buttonPad, text="8", fg="black", width=10, height=3, bd=0, bg="#d1d1d1", cursor="hand2", command=lambda: button_click(8)).grid(row=1, column=1, padx=1, pady=1) 
 
+nine = Button(buttonPad, text="9", fg="black", width=10, height=3, bd=0, bg="#d1d1d1", cursor="hand2", command=lambda: button_click(9)).grid(row=1, column=2, padx=1, pady=1) 
+
+multiply = Button(buttonPad, text = "X", fg = "blue", width = 10, height = 3, bd = 0, bg = "#c9c7c7", cursor = "hand2", command = lambda: button_click("X")).grid(row = 1, column = 3, padx = 1, pady = 1)
 window.mainloop()
