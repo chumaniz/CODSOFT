@@ -34,7 +34,18 @@ screen_frame = Frame(window, width=320, height=40, bd=0, highlightbackground="cy
 screen_frame.pack(side=TOP)
 
 screen_fill = Entry(screen_frame, font=('Impact', 20, 'bold'),
-numberVariable=typedText, width=60, bg="#cec7ff", bd=0, justify=RIGHT)
+textvariable=typedText, width=60, bg="#cec7ff", bd=0, justify=RIGHT)
+
+screen_fill.grid(row=0, column=0)
+
+screen_fill.pack(ipady=10)
+
+
+buttonPad = Frame(window, width=400, height=300, bg="grey")
+
+
+
+buttonPad.pack()
 
 
 
