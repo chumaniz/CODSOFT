@@ -68,4 +68,13 @@ six = Button(buttonPad, text = "6", fg = "black", width = 10, height = 3, bd = 0
  
 minus = Button(buttonPad, text = "-", fg = "black", width = 10, height = 3, bd = 0, bg = "#c9c7c7", cursor = "hand2", command = lambda: button_click("-")).grid(row = 2, column = 3, padx = 1, pady = 1)
 
+# row4
+one = Button(buttonPad, text = "1", fg = "black", width = 10, height = 3, bd = 0, bg = "#d1d1d1", cursor = "hand2", command = lambda: button_click(1)).grid(row = 3, column = 0, padx = 1, pady = 1)
+ 
+two = Button(buttonPad, text = "2", fg = "black", width = 10, height = 3, bd = 0, bg = "#d1d1d1", cursor = "hand2", command = lambda: button_click(2)).grid(row = 3, column = 1, padx = 1, pady = 1)
+ 
+three = Button(buttonPad, text = "3", fg = "black", width = 10, height = 3, bd = 0, bg = "#d1d1d1", cursor = "hand2", command = lambda: button_click(3)).grid(row = 3, column = 2, padx = 1, pady = 1)
+ 
+plus = Button(buttonPad, text = "+", fg = "black", width = 10, height = 3, bd = 0, bg = "#c9c7c7", cursor = "hand2", command = lambda: button_click("+")).grid(row = 3, column = 3, padx = 1, pady = 1)
+
 window.mainloop()
