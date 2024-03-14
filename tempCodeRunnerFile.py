@@ -1,1 +1,0 @@
-.grid(row=4, column=0, columnspan=1, padx=1, pady=1)
