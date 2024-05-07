@@ -1,5 +1,5 @@
 # CODSOFT 1 Month Internship
-# I worked with CODSOFT for a month to learn more about Python and represent that in the form of projects
+# I worked with CODSOFT for a month to learn more about Python and represent that in the form of the following projects:
 
 TodoList- This is an app that allows users to list their important tasks down and improve productivity
 I will be using Python for the logic and Tkinter for the design.
